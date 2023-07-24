@@ -1,27 +1,26 @@
 #include "main.h"
 /**
- * print_string
+ * print_string 
  * @s: the variadic argument from the printf function
  * Return: amount of characters printed
- **/
+**/
 int print_string(va_list s)
 {
-	char *strng;
-	int index;
+	char *string;
+	int i;
 
-	strng = va_arg(s, char *);
-	if (strng == '\0')
+	string = va_arg(s, char *);
+	if (string == '\0')
 	{
 		string = "(null)";
 	}
-	for (index = 0; strng[index] != '\0'; index++)
+	for (i = 0; string[i] != '\0'; i++)
 	{
-		_putchar(strng[index]);
+		_putchar(string[i]);
 	}
-	return (index);
-}
+	return (i);
 /**
- *print_char
+ *print_char 
  *@c: the variadic argument from the printf function
  *Return: amount of characters printed (one).
 **/
