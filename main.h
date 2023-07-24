@@ -3,41 +3,33 @@
 
 #include <stdlib.h>
 #include <stdarg.h>
-
+#include <unistd.h>
+#include <limits.h>
 /**
- * struct specs - struct containing flags to "turn on"
- * when a specifier is passed to _printf()
- * @space: stand for the ' ' character 
- * @plus: stand for the '+' character
- * @hash: stand for the '#' character
- */
-typedef struct specs
+ * struct special_cases
+ * @match: the special character to match after find a percentage
+ * @function: the associated function to be called in each specialcase
+*/
+
+typedef struct special_cases
 {
-	int space;
-	int plus;
-	int hash;
-      
-} specs_t;
+	char *match;
+	int (*function)(va_list);
+} spc_t;
 
-/**
- * struct printhandler - struct to choose the right function depending
- * on the format specifier passed to _printf()
- * @s: format specifier
- * @p: pointer to the correct printing function
- */
-typedef struct printhandler
-{
-	char s;
-	int (*p)(va_list ap, specs_t *p);
-} ph;
+/*format - print data*/
+int _printf(const char *format, ...);
 
-/* _printf */
+/*writes the character c */
+int _putchar(char c);
 
-/* print_sting */
-int print_string(va_list l, specs_t *p);
-/* Print_char */
-int print_char(va_list l, specs_t *p);
-/* print_percent */
-int print_percent(va_list l, specs_t *p);
+/*search for match and execute the function */
+int (*mod_character_s(const char *next, int dino))(va_list);
+
+/*prints a char*/
+int print_char(va_list c);
+
+/*prints a string */
+int print_string(va_list s);
 
 #endif
