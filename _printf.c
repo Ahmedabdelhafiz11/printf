@@ -22,7 +22,7 @@ int _printf(const char *format, ...)
 				i = i + 1;
 				length++;
 			}
-			else if (mod_character_s(format, i + 1) != '\0')
+			else if (mod_character_s(format, i + 1) != NULL)
 			{   length += mod_character_s(format, i + 1)(call);
 				i = i + 1;
 			}
