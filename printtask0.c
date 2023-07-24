@@ -27,9 +27,28 @@ int print_string(va_list s)
 **/
 int print_char(va_list c)
 {
-	char character = (char) va_arg(c, int);
+	char character = va_arg(c, char);
 
 	_putchar (character);
 
 	return (1);
+}
+
+/**
+ * print_number - prints the input number
+ * @num: input
+*/
+void print_number(va_list n)
+{
+int num = (int *) va_arg(n, int);
+
+if (num < 0)
+{
+	_putchar(45);
+	num = -num;
+}
+if ((num / 10) > 0)
+	print_number(num / 10);
+
+_putchar(48 + (num % 10));
 }
