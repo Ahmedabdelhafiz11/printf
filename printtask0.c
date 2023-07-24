@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * print_string 
+ * print_string - function that prints a string
  * @s: the variadic argument from the printf function
  * Return: amount of characters printed
 **/
@@ -10,7 +10,7 @@ int print_string(va_list s)
 	int i;
 
 	string = va_arg(s, char *);
-	if (string == '\0')
+	if (string == NULL)
 	{
 		string = "(null)";
 	}
@@ -19,8 +19,9 @@ int print_string(va_list s)
 		_putchar(string[i]);
 	}
 	return (i);
+}
 /**
- *print_char 
+ *print_char - function that prints a character
  *@c: the variadic argument from the printf function
  *Return: amount of characters printed (one).
 **/
