@@ -5,21 +5,6 @@
 #include <stdarg.h>
 
 /**
- * struct specs - struct containing flags to "turn on"
- * when a specifier is passed to _printf()
- * @space: stand for the ' ' character 
- * @plus: stand for the '+' character
- * @hash: stand for the '#' character
- */
-typedef struct specs
-{
-	int space;
-	int plus;
-	int hash;
-      
-} specs_t;
-
-/**
  * struct printhandler - struct to choose the right function depending
  * on the format specifier passed to _printf()
  * @s: format specifier
