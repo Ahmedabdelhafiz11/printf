@@ -14,6 +14,7 @@ int (*mod_character_s(const char *next, int dino))(va_list)
 		{"d", print_int},
 		{"i", print_int},
 		{"b", print_bin},
+		{"u", print_u_int},
 		{NULL, NULL}
 	};
 
