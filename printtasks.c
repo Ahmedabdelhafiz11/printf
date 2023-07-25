@@ -85,30 +85,37 @@ int print_int(va_list in)
  * @in: argument to print
  * Return: number of characters printed
 */
-
 int print_bin(va_list in)
 {
-	int count, i, n = va_arg(in, int);
-	int arr[31];
+	int count, ten, i, dig, n, num;
+	int x = 0;
+
+	n = va_arg(in, int);
 	if (n != 0)
-	{	
-	for (i = 0; i < 32; i++)
-		arr[i] = '\0';
-	for (i = 0; i < 32 && (n > 1); i++)
 	{
-		arr[i] = (n % 2);
-		n /= 2;
-	}
-	for (i = 31; i >= 0 && (arr[i] != '\0'); i--)
-	{
-		_printf("%d", arr[i]);
-		count++;
-	}
+		num = n;
+		count = 0;
+		while (num != 0)
+		{
+			num /= 2;
+			count++;
+		}
+		ten = 1;
+		for (i = 1; i <= count - 1; i++)
+			ten *= 2;
+		for (i = 1; i <= count; i++)
+		{
+			dig = n / ten;
+			_putchar(digit + '0');
+			count++;
+			n -= dig * ten;
+		  ten /= 2;
+		}
 	}
 	else
 	{
 		_putchar('0');
 		return (1);
-	}	
+	}
 	return (count);
 }
