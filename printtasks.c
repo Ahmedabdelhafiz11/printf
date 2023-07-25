@@ -36,7 +36,7 @@ int print_char(va_list c)
 }
 
 /**
- * printf_int - prints integer
+ * print_int - prints integer
  * @in: argument to print
  * Return: number of characters printed
 */
