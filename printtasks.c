@@ -90,7 +90,8 @@ int print_bin(va_list in)
 {
 	int count, i, n = va_arg(in, int);
 	int arr[31];
-
+	if (n != 0)
+	{	
 	for (i = 0; i < 32; i++)
 		arr[i] = '\0';
 	for (i = 0; i < 32 && (n > 1); i++)
@@ -102,6 +103,7 @@ int print_bin(va_list in)
 	{
 		_printf("%d", arr[i]);
 		count++;
+	}
 	}
 	else
 	{
