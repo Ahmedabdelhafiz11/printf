@@ -36,7 +36,7 @@ int print_char(va_list c)
 
 /**
  * printf_int - prints integer
- * @args: argument to print
+ * @in: argument to print
  * Return: number of characters printed
 */
 int printf_int(va_list in)
@@ -80,7 +80,7 @@ int printf_int(va_list in)
 
 /**
  * printf_dec - prints decimal
- * @args: argument to print
+ * @de: argument to print
  * Return: number of characters printed
  */
 
