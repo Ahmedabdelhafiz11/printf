@@ -41,6 +41,8 @@ int print_bin(va_list in);
 
 /*prints an unsigned integer*/
 int print_u_int(va_list in);
+/*print rev string*/
+int print_rev(va_list rs);
 /*prints Rot13 string*/
 int print_rot13(va_list R);
 #endif
