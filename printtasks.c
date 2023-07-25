@@ -1,4 +1,5 @@
 #include "main.h"
+#include <stdio.h>
 /**
  * print_string - function that prints a string
  * @s: the variadic argument from the printf function
