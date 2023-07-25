@@ -34,5 +34,7 @@ int print_char(va_list c);
 int print_string(va_list s);
 
 /*prints a number*/
-int print_number(va_list n);
+int print_int(va_list in);
+/*prints a dec*/
+int print_dec(va_list de);
 #endif

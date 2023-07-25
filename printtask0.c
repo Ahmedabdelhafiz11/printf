@@ -39,9 +39,9 @@ int print_char(va_list c)
  * @args: argument to print
  * Return: number of characters printed
 */
-int printf_int(va_list args)
+int printf_int(va_list in)
 {
-	int n = va_arg(args, int);
+	int n = va_arg(in, int);
 	int num, last = n % 10, digit, ex = 1;
 	int  x = 1;
 
@@ -84,9 +84,9 @@ int printf_int(va_list args)
  * Return: number of characters printed
  */
 
-int printf_dec(va_list args)
+int printf_dec(va_list de)
 {
-	int n = va_arg(args, int);
+	int n = va_arg(de, int);
 	int num, last = n % 10, digit;
 	int  x = 1;
 	int ex = 1;
