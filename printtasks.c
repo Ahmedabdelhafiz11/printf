@@ -87,10 +87,10 @@ int print_int(va_list in)
 */
 int print_bin(va_list in)
 {
-	int count, ten, i, dig, n, num;
+	unsigned int count, ten, i, dig, n, num;
 	int x = 0;
 
-	n = va_arg(in, int);
+	n = va_arg(in, unsigned int);
 	if (n != 0)
 	{
 		num = n;
@@ -107,7 +107,7 @@ int print_bin(va_list in)
 		{
 			dig = n / ten;
 			_putchar(dig + '0');
-			count++;
+			x++;
 			n -= dig * ten;
 		  ten /= 2;
 		}
@@ -117,5 +117,5 @@ int print_bin(va_list in)
 		_putchar('0');
 		return (1);
 	}
-	return (count);
+	return (x);
 }
