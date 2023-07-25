@@ -36,4 +36,7 @@ int print_string(va_list s);
 /*prints a number*/
 int print_int(va_list in);
 
+/*prints a number converted to binary*/
+int print_bin(va_list in);
+
 #endif
