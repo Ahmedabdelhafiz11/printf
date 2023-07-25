@@ -106,7 +106,7 @@ int print_bin(va_list in)
 		for (i = 1; i <= count; i++)
 		{
 			dig = n / ten;
-			_putchar(digit + '0');
+			_putchar(dig + '0');
 			count++;
 			n -= dig * ten;
 		  ten /= 2;
