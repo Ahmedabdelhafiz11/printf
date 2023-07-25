@@ -10,7 +10,7 @@ int (*mod_character_s(const char *next, int dino))(va_list)
 	int i;
 	spc_t options[] = {
 		{"s", print_string},{"c", print_char},
-		{'i', print_number},{'d', print_number},
+		{"i", print_number},{"d", print_number},
 		{'\0', NULL}
 	};
 
