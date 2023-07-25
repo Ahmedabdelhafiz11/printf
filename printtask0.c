@@ -45,7 +45,7 @@ int printf_int(va_list in)
 {
 	int n = va_arg(in, int);
 	int num, last = n % 10, digit, ex = 1;
-	int  x = 1;
+	int  i = 1;
 
 	n /= 10;
 	num = n;
@@ -72,12 +72,13 @@ int printf_int(va_list in)
 			_putchar(digit + '0');
 			num = num - (digit * ex);
 			ex /= 10;
-			x++;
+			i++;
 		}
 	}
 	_putchar(last + '0');
-	return (x);
+	return (i);
 }
+
 /**
  * printf_dec - prints decimal
  * @de: argument to print
