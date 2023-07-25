@@ -1,10 +1,10 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * print_rot13 -convert a string into rot13.
- * @R: string to convert
- * Return: output text
-*/
+  * print_rot13 -convert a string into rot13.
+  * @R: string to convert
+  * Return: output text
+  */
 int print_rot13(va_list R)
 {
 	int i, j, count = 0;
