@@ -39,6 +39,4 @@ int print_int(va_list in);
 /*prints a number converted to binary*/
 int print_bin(va_list in);
 
-/*prints an unsigned integer*/
-int print_u_int(unsigned int n);
 #endif
