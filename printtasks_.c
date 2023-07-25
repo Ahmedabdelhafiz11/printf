@@ -1,9 +1,9 @@
 /**
- * print_u_number - Prints an unsigned number
+ * print_u_int - Prints an unsigned number
  * @n: unsigned integer as input
  * Return: The amount of numbers printed
  */
-int print_u_number(unsigned int n)
+int print_u_int(unsigned int n)
 {
 	int l, diviseur = 1;
 	unsigned int num = n;
