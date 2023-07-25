@@ -1,3 +1,4 @@
+#include "main.h"
 /**
  * print_u_int - Prints an unsigned number
  * @n: unsigned integer as input
@@ -22,3 +23,4 @@ int print_u_int(unsigned int n)
 
 	return (l);
 }
+
