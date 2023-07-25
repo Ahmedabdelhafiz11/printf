@@ -21,13 +21,13 @@ int print_string(va_list s)
 	return (i);
 }
 /**
- *print_char - function that prints a character
- *@c: the variadic argument from the printf function
- *Return: amount of characters printed (one).
+ * print_char - function that prints a character
+ * @c: the variadic argument from the printf function
+ * Return: amount of characters printed (one).
 **/
 int print_char(va_list c)
 {
-	char character = va_arg(c, char);
+	char character = va_arg(c, int);
 
 	_putchar (character);
 
@@ -36,11 +36,13 @@ int print_char(va_list c)
 
 /**
  * print_number - prints the input number
- * @num: input
+ * @n: input
+ * Return: amount of num printed
 */
-void print_number(va_list n)
+int print_number(va_list n)
 {
-int num = (int *) va_arg(n, int);
+int num = va_arg(n, int);
+int i = 0;
 
 if (num < 0)
 {
@@ -48,7 +50,11 @@ if (num < 0)
 	num = -num;
 }
 if ((num / 10) > 0)
+{
+	i++;
 	print_number(num / 10);
-
+}
 _putchar(48 + (num % 10));
+i++;
+return (i);
 }
