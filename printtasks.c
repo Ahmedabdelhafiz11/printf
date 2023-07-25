@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stdio.h>
+
 /**
  * print_string - function that prints a string
  * @s: the variadic argument from the printf function
@@ -103,5 +103,10 @@ int print_bin(va_list in)
 		_printf("%d", arr[i]);
 		count++;
 	}
+	else
+	{
+		_putchar('0');
+		return (1);
+	}	
 	return (count);
 }
