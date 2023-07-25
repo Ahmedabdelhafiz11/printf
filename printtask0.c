@@ -33,15 +33,16 @@ int print_char(va_list c)
 
 	return (1);
 }
+
 /**
  * printf_int - prints integer
  * @args: argument to print
  * Return: number of characters printed
- */
+*/
 int printf_int(va_list args)
 {
 	int n = va_arg(args, int);
-	int num, last = n % 10, digit, exp = 1;
+	int num, last = n % 10, digit, ex = 1;
 	int  x = 1;
 
 	n = n / 10;
@@ -59,16 +60,16 @@ int printf_int(va_list args)
 	{
 		while (num / 10 != 0)
 		{
-			exp = exp * 10;
-			num = num / 10;
+			ex *= 10;
+			num /= 10;
 		}
 		num = n;
-		while (exp > 0)
+		while (ex > 0)
 		{
-			digit = num / exp;
+			digit = num / ex;
 			_putchar(digit + '0');
-			num = num - (digit * exp);
-			exp = exp / 10;
+			num = num - (digit * ex);
+			ex /= 10;
 			x++;
 		}
 	}
@@ -88,9 +89,9 @@ int printf_dec(va_list args)
 	int n = va_arg(args, int);
 	int num, last = n % 10, digit;
 	int  x = 1;
-	int exp = 1;
+	int ex = 1;
 
-	n = n / 10;
+	n /= 10;
 	num = n;
 
 	if (last < 0)
@@ -105,16 +106,16 @@ int printf_dec(va_list args)
 	{
 		while (num / 10 != 0)
 		{
-			exp = exp * 10;
-			num = num / 10;
+			ex *= 10;
+			num /= 10;
 		}
 		num = n;
-		while (exp > 0)
+		while (ex > 0)
 		{
-			digit = num / exp;
+			digit = num / ex;
 			_putchar(digit + '0');
 			num = num - (digit * exp);
-			exp = exp / 10;
+			ex /= 10;
 			x++;
 		}
 	}
