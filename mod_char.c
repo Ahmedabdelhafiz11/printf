@@ -17,6 +17,7 @@ int (*mod_character_s(const char *next, int dino))(va_list)
 		{"u", print_u_int},
 		{"r", print_rev},
 		{"R", print_rot13},
+		{"o", print_octal},
 		{NULL, NULL}
 	};
 
