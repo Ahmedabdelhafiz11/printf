@@ -20,6 +20,7 @@ int print_string(va_list s)
 	}
 	return (i);
 }
+
 /**
  * print_char - function that prints a character
  * @c: the variadic argument from the printf function
