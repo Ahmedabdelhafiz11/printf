@@ -7,7 +7,7 @@
 #include <unistd.h>
 #include <limits.h>
 /**
- * struct special_cases 
+ * struct special_cases - structure
  * @match: the special character to match after find a percentage
  * @function: the associated function to be called in each specialcase
 */
