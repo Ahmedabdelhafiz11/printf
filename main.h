@@ -32,4 +32,7 @@ int print_char(va_list c);
 
 /*prints a string */
 int print_string(va_list s);
+
+/*prints a number*/
+int print_number(va_list n);
 #endif
