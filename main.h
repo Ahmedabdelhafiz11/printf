@@ -48,4 +48,6 @@ int print_rev(va_list rs);
 /*prints Rot13 string*/
 int print_rot13(va_list R);
 
+/*prints a number converted to octa*/
+int print_octal(va_list o);
 #endif
