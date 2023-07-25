@@ -65,4 +65,3 @@ int print_octal(va_list o)
 	}
 	return (count);
 }
-}
