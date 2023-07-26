@@ -7,7 +7,7 @@
   */
 int print_rot13(va_list R)
 {
-	int i, j, count = 0;
+	int i, j;
 	char *r;
 	char input[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz";
 	char output[] = "NOPQRSTUVWXYZABCDEFGHIJKLM nopqrstuvwxyzabcdefghijklm";
@@ -22,12 +22,11 @@ int print_rot13(va_list R)
 			if (r[i] == input[j])
 			{
 				_putchar(output[j]);
-				count++;
 				break;
 			}
 		}
 		if (j == 53)
 			_putchar(r[i]);
 	}
-	return (count);
+	return (i);
 }
