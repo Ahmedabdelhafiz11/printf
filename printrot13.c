@@ -17,7 +17,7 @@ int print_rot13(va_list R)
 		return (-1);
 	for (i = 0; r[i] != '\0'; i++)
 	{
-		for (j = 0; j < 52; j++)
+		for (j = 0; j <= 52; j++)
 		{
 			if (r[i] == input[j])
 			{
@@ -26,6 +26,8 @@ int print_rot13(va_list R)
 				break;
 			}
 		}
+		if (j == 53)
+			_putchar(r[i]);
 	}
 	return (count);
 }
